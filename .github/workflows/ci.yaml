@@ -36,7 +36,6 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: sha256_checksums.json
-          path: sha256_checksums.json
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
