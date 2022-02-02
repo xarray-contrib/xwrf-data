@@ -47,3 +47,6 @@ jobs:
 
             [1]: https://github.com/peter-evans/create-pull-request
           branch: update-checksums-file
+          delete-branch: true
+          add-paths: |
+            sha256_checksums.json
