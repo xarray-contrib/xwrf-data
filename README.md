@@ -1,3 +1,6 @@
+[![CI](https://github.com/ncar-xdev/xwrf-data/actions/workflows/ci.yaml/badge.svg)](https://github.com/ncar-xdev/xwrf-data/actions/workflows/ci.yaml)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ncar-xdev/xwrf-data/main.svg)](https://results.pre-commit.ci/latest/github/ncar-xdev/xwrf-data/main)
+
 # xwrf-data
 
 Data repository for xwrf documentation, tutorials, testing
