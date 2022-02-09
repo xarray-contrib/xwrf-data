@@ -9,5 +9,8 @@ Data repository for xwrf documentation, tutorials, testing
 
 These files are used as sample data in xwrf testing suites, tutorials, and documentation. These data sets can be downloaded via the [`xwrf`](https://github.com/ncar-xdev/xwrf) tutorial module. See the documentation for more information.
 
-- [`lambert_conformal_sample.nc`](./data/lambert_conformal_sample.nc): Retrieved from <https://api.blika.is/static/wrfout_example.nc>
 - [`dummy.nc`](./data/dummy.nc): A dummy file for testing purposes
+- [`lambert_conformal_sample.nc`](./data/lambert_conformal_sample.nc): Retrieved from <https://api.blika.is/static/wrfout_example.nc>
+- [`mercator_sample.nc`](./data/mercator_sample.nc): Retrieved from <https://github.com/NCAR/wrf-python/blob/develop/test/ci_tests/ci_test_file.nc?rgh-link-date=2022-02-07T21%3A50%3A37Z>
+- [`geo_em_d01_polarstereo.nc`](./data/geo_em_d01_polarstereo.nc): polar stereographic sample from [Salem](https://github.com/fmaussion/salem-sample-data/blob/master/salem-test/grid/geo_em_d01_polarstereo.nc?rgh-link-date=2022-02-07T21%3A50%3A37Z)
+- [`geo_em_d02_polarstereo.nc`](./data/geo_em_d02_polarstereo.nc): polar stereographic with inner nest sample from [Salem](https://github.com/fmaussion/salem-sample-data/blob/master/salem-test/grid/geo_em_d02_polarstereo.nc?rgh-link-date=2022-02-07T21%3A50%3A37Z)
