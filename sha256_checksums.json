@@ -3,5 +3,6 @@
   "geo_em_d01_polarstereo.nc": "120335893e74adf1e85ec459f58bf5d63aca109041bff71b0814d898cf173251",
   "geo_em_d02_polarstereo.nc": "c230d1a788e501c8853588b8b6fb198e5090e880f33969d534b749da8fa0f1d7",
   "lambert_conformal_sample.nc": "bef3b92a2bff65e84d8073e08409a17209468b786e6e2b03102e4ad28c3da36c",
-  "mercator_sample.nc": "14bc3e901c252d8f1ebb230fd2450a8eb8875b8c15230c12de6f3d29177e26d0"
+  "mercator_sample.nc": "14bc3e901c252d8f1ebb230fd2450a8eb8875b8c15230c12de6f3d29177e26d0",
+  "tiny.nc": "67ab61835efaff3bd93a7f46d302b3a0180da2e1b6680dbc2de7bf92f98a5c44"
 }
