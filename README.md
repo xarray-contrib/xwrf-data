@@ -17,3 +17,4 @@ These files are used as sample data in xwrf testing suites, tutorials, and docum
 - [`lambert_conformal_sample.nc`](./data/lambert_conformal_sample.nc): Retrieved from <https://api.blika.is/static/wrfout_example.nc>
 - [`mercator_sample.nc`](./data/mercator_sample.nc): Retrieved from [NCAR/wrf-pyton](https://github.com/NCAR/wrf-python/blob/develop/test/ci_tests/ci_test_file.nc?rgh-link-date=2022-02-07T21%3A50%3A37Z)
 - [`tiny.nc`](./data/tiny.nc): A tiny file for testing purposes
+- [`met_em.d01.2005-08-28_12:00:00.nc`](met_em.d01.2005-08-28_12:00:00.nc): Metgrid ouput from [openwfm](https://wiki.openwfm.org/wiki/How_to_run_WRF-Fire_with_real_data)
