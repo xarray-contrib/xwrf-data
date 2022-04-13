@@ -18,4 +18,4 @@ These files are used as sample data in xwrf testing suites, tutorials, and docum
 - [`mercator_sample.nc`](./data/mercator_sample.nc): Retrieved from [NCAR/wrf-pyton](https://github.com/NCAR/wrf-python/blob/develop/test/ci_tests/ci_test_file.nc?rgh-link-date=2022-02-07T21%3A50%3A37Z)
 - [`tiny.nc`](./data/tiny.nc): A tiny file for testing purposes
 - [`met_em.d01.2005-08-28_12:00:00.nc`](./data/met_em.d01.2005-08-28_12:00:00.nc): Metgrid ouput from [openwfm](https://wiki.openwfm.org/wiki/How_to_run_WRF-Fire_with_real_data)
-- [`wrfout_d03_2018-10-18_00:00:00_only_1time.nc`](./data/wrfout_d03_2018-10-18_00:00:00_only_1time.nc): Custom WRF output file for testing purposes
+- [`wrfout_d03_2018-10-16_00:00:00.nc`](./data/wrfout_d03_2018-10-16_00:00:00.nc): Custom WRF output file for testing purposes
