@@ -91,6 +91,6 @@ Attributes: (12/149)
 
 This catalog includes:
 
-- [`xwrf-sample-ssp245`](./catalogs/xwrf-sample-ssp245.json): Custom WRF output file for testing purposes
-- [`ssp245_gcm_wrfout_combined`](./catalogs/ssp245_gcm_wrfout_combined.json): Custom WRF output file for testing purposes
-- [`xwrf-sample-ssp585`](./catalogs/xwrf-sample-ssp585.json): Custom WRF output file for testing purposes
+- [`xwrf-sample-ssp245`](./catalogs/ssp245_gcm_wrfout_combined.json): WRF Downscaled CMIP6; SSP245; Combined virtual dataset (2099-10, d01)
+- [`xwrf-sample-ssp585`](./catalogs/ssp585_gcm_wrfout_combined.json): WRF Downscaled CMIP6; SSP585; Combined virtual dataset (2099-10, d01)
+- [`single-output-sample`](./catalogs/gcm_wrfout_d01_2099-10-01_00_00_00.json): Virtual WRF output dataset for testing purposes, consisting of a single time from xwrf-sample-ssp585 (2099-10-01T00:00)
