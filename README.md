@@ -30,7 +30,7 @@ You can access this data catalog using the following syntax:
 import intake
 
 # Read in the data catalog from github
-cat = intake.open_catalog('https://raw.githubusercontent.com/mgrover1/sample-wrf-data/main/catalog.yml')
+cat = intake.open_catalog('https://raw.githubusercontent.com/xarray-contrib/xwrf-data/main/catalogs/catalog.yml')
 
 # Read one of the sample datasets
 ds = cat["xwrf-sample-ssp245"].to_dask()
