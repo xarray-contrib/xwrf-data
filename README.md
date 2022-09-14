@@ -19,3 +19,78 @@ These files are used as sample data in xwrf testing suites, tutorials, and docum
 - [`tiny.nc`](./data/tiny.nc): A tiny file for testing purposes
 - [`met_em.d01.2005-08-28_12:00:00.nc`](./data/met_em.d01.2005-08-28_12:00:00.nc): Metgrid ouput from [openwfm](https://wiki.openwfm.org/wiki/How_to_run_WRF-Fire_with_real_data)
 - [`wrfout_d03_2018-10-16_00:00:00.nc`](./data/wrfout_d03_2018-10-16_00:00:00.nc): Custom WRF output file for testing purposes
+
+## Sample Intake Catalog
+
+We also include an [intake](https://github.com/intake/intake) catalog, which makes use of [intake-xarray](https://github.com/intake/intake-xarray).
+
+You can access this data catalog using the following syntax:
+
+```python
+import intake
+
+# Read in the data catalog from github
+cat = intake.open_catalog('https://raw.githubusercontent.com/mgrover1/sample-wrf-data/main/catalog.yml')
+
+# Read one of the sample datasets
+ds = cat["xwrf-sample-ssp245"].to_dask()
+
+ds
+<xarray.Dataset>
+Dimensions:                (XTIME: 124, Time: 1, south_north: 340,
+                            west_east: 270, bottom_top_stag: 40,
+                            bottom_top: 39,
+                            soil_levels_or_lake_levels_stag: 10,
+                            snow_and_soil_levels_stag: 15, soil_layers_stag: 4,
+                            seed_dim_stag: 2, west_east_stag: 271,
+                            south_north_stag: 341, snow_layers_stag: 3,
+                            interface_levels_stag: 16, snso_layers_stag: 7)
+Coordinates:
+    XLAT                   (Time, south_north, west_east) float32 dask.array<chunksize=(1, 170, 135), meta=np.ndarray>
+    XLAT_U                 (Time, south_north, west_east_stag) float32 dask.array<chunksize=(1, 170, 136), meta=np.ndarray>
+    XLAT_V                 (Time, south_north_stag, west_east) float32 dask.array<chunksize=(1, 171, 135), meta=np.ndarray>
+    XLONG                  (Time, south_north, west_east) float32 dask.array<chunksize=(1, 170, 135), meta=np.ndarray>
+    XLONG_U                (Time, south_north, west_east_stag) float32 dask.array<chunksize=(1, 170, 136), meta=np.ndarray>
+    XLONG_V                (Time, south_north_stag, west_east) float32 dask.array<chunksize=(1, 171, 135), meta=np.ndarray>
+  * XTIME                  (XTIME) datetime64[ns] 2099-10-01 ... 2099-10-31T1...
+Dimensions without coordinates: Time, south_north, west_east, bottom_top_stag,
+                                bottom_top, soil_levels_or_lake_levels_stag,
+                                snow_and_soil_levels_stag, soil_layers_stag,
+                                seed_dim_stag, west_east_stag,
+                                south_north_stag, snow_layers_stag,
+                                interface_levels_stag, snso_layers_stag
+Data variables: (12/283)
+    ACGRDFLX               (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    ACHFX                  (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    ACLHF                  (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    ACLWDNB                (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    ACLWDNBC               (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    ACLWDNT                (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    ...                     ...
+    ZNU                    (XTIME, Time, bottom_top) float32 dask.array<chunksize=(1, 1, 39), meta=np.ndarray>
+    ZNW                    (XTIME, Time, bottom_top_stag) float32 dask.array<chunksize=(1, 1, 40), meta=np.ndarray>
+    ZS                     (XTIME, Time, soil_layers_stag) float32 dask.array<chunksize=(1, 1, 4), meta=np.ndarray>
+    ZSNSO                  (XTIME, Time, snso_layers_stag, south_north, west_east) float32 dask.array<chunksize=(1, 1, 7, 170, 135), meta=np.ndarray>
+    ZWT                    (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    Z_LAKE3D               (XTIME, Time, soil_levels_or_lake_levels_stag, south_north, west_east) float32 dask.array<chunksize=(1, 1, 10, 170, 135), meta=np.ndarray>
+Attributes: (12/149)
+    ADAPT_DT_MAX:                    72.0
+    ADAPT_DT_MIN:                    36.0
+    ADAPT_DT_START:                  54.0
+    AERCU_FCT:                       1.0
+    AERCU_OPT:                       0
+    AER_ANGEXP_OPT:                  1
+    ...                              ...
+    WEST-EAST_PATCH_END_STAG:        271
+    WEST-EAST_PATCH_END_UNSTAG:      270
+    WEST-EAST_PATCH_START_STAG:      1
+    WEST-EAST_PATCH_START_UNSTAG:    1
+    W_DAMPING:                       0
+    YSU_TOPDOWN_PBLMIX:              0
+```
+
+This catalog includes:
+
+- [`xwrf-sample-ssp245`](./catalogs/xwrf-sample-ssp245.json): Custom WRF output file for testing purposes
+- [`ssp245_gcm_wrfout_combined`](./catalogs/ssp245_gcm_wrfout_combined.json): Custom WRF output file for testing purposes
+- [`xwrf-sample-ssp585`](./catalogs/xwrf-sample-ssp585.json): Custom WRF output file for testing purposes
