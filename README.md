@@ -89,7 +89,7 @@ Attributes: (12/149)
     YSU_TOPDOWN_PBLMIX:              0
 ```
 
-This catalog includes:
+This catalog includes the following virtual datasets created using [kerchunk](https://fsspec.github.io/kerchunk/):
 
 - [`xwrf-sample-ssp245`](./catalogs/ssp245_gcm_wrfout_combined.json): WRF Downscaled CMIP6; SSP245; Combined virtual dataset (2099-10, d01)
 - [`xwrf-sample-ssp585`](./catalogs/ssp585_gcm_wrfout_combined.json): WRF Downscaled CMIP6; SSP585; Combined virtual dataset (2099-10, d01)
