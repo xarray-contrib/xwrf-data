@@ -14,6 +14,7 @@ sources:
         remote_options:
           anon: true
         remote_protocol: s3
+      decode_times: False
 
   xwrf-sample-ssp585:
     driver: intake_xarray.xzarr.ZarrSource
@@ -30,6 +31,7 @@ sources:
         remote_options:
           anon: true
         remote_protocol: s3
+      decode_times: False
 
   single-output-sample:
     driver: intake_xarray.xzarr.ZarrSource

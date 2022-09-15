@@ -36,43 +36,46 @@ cat = intake.open_catalog('https://raw.githubusercontent.com/xarray-contrib/xwrf
 ds = cat["xwrf-sample-ssp245"].to_dask()
 
 ds
+```
+
+```
 <xarray.Dataset>
-Dimensions:                (XTIME: 124, Time: 1, south_north: 340,
-                            west_east: 270, bottom_top_stag: 40,
-                            bottom_top: 39,
+Dimensions:                (Time: 124, south_north: 340, west_east: 270,
+                            bottom_top_stag: 40, bottom_top: 39,
                             soil_levels_or_lake_levels_stag: 10,
                             snow_and_soil_levels_stag: 15, soil_layers_stag: 4,
                             seed_dim_stag: 2, west_east_stag: 271,
                             south_north_stag: 341, snow_layers_stag: 3,
                             interface_levels_stag: 16, snso_layers_stag: 7)
 Coordinates:
-    XLAT                   (Time, south_north, west_east) float32 dask.array<chunksize=(1, 170, 135), meta=np.ndarray>
-    XLAT_U                 (Time, south_north, west_east_stag) float32 dask.array<chunksize=(1, 170, 136), meta=np.ndarray>
-    XLAT_V                 (Time, south_north_stag, west_east) float32 dask.array<chunksize=(1, 171, 135), meta=np.ndarray>
-    XLONG                  (Time, south_north, west_east) float32 dask.array<chunksize=(1, 170, 135), meta=np.ndarray>
-    XLONG_U                (Time, south_north, west_east_stag) float32 dask.array<chunksize=(1, 170, 136), meta=np.ndarray>
-    XLONG_V                (Time, south_north_stag, west_east) float32 dask.array<chunksize=(1, 171, 135), meta=np.ndarray>
-  * XTIME                  (XTIME) datetime64[ns] 2099-10-01 ... 2099-10-31T1...
-Dimensions without coordinates: Time, south_north, west_east, bottom_top_stag,
+  * Time                   (Time) float64 nan 1.0 2.0 3.0 ... 121.0 122.0 123.0
+    XLAT                   (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    XLAT_U                 (Time, south_north, west_east_stag) float32 dask.array<chunksize=(1, 340, 271), meta=np.ndarray>
+    XLAT_V                 (Time, south_north_stag, west_east) float32 dask.array<chunksize=(1, 341, 270), meta=np.ndarray>
+    XLONG                  (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    XLONG_U                (Time, south_north, west_east_stag) float32 dask.array<chunksize=(1, 340, 271), meta=np.ndarray>
+    XLONG_V                (Time, south_north_stag, west_east) float32 dask.array<chunksize=(1, 341, 270), meta=np.ndarray>
+    XTIME                  (Time) float32 dask.array<chunksize=(1,), meta=np.ndarray>
+Dimensions without coordinates: south_north, west_east, bottom_top_stag,
                                 bottom_top, soil_levels_or_lake_levels_stag,
                                 snow_and_soil_levels_stag, soil_layers_stag,
                                 seed_dim_stag, west_east_stag,
                                 south_north_stag, snow_layers_stag,
                                 interface_levels_stag, snso_layers_stag
 Data variables: (12/283)
-    ACGRDFLX               (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
-    ACHFX                  (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
-    ACLHF                  (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
-    ACLWDNB                (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
-    ACLWDNBC               (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
-    ACLWDNT                (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
+    ACGRDFLX               (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    ACHFX                  (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    ACLHF                  (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    ACLWDNB                (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    ACLWDNBC               (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    ACLWDNT                (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
     ...                     ...
-    ZNU                    (XTIME, Time, bottom_top) float32 dask.array<chunksize=(1, 1, 39), meta=np.ndarray>
-    ZNW                    (XTIME, Time, bottom_top_stag) float32 dask.array<chunksize=(1, 1, 40), meta=np.ndarray>
-    ZS                     (XTIME, Time, soil_layers_stag) float32 dask.array<chunksize=(1, 1, 4), meta=np.ndarray>
-    ZSNSO                  (XTIME, Time, snso_layers_stag, south_north, west_east) float32 dask.array<chunksize=(1, 1, 7, 170, 135), meta=np.ndarray>
-    ZWT                    (XTIME, Time, south_north, west_east) float32 dask.array<chunksize=(1, 1, 170, 135), meta=np.ndarray>
-    Z_LAKE3D               (XTIME, Time, soil_levels_or_lake_levels_stag, south_north, west_east) float32 dask.array<chunksize=(1, 1, 10, 170, 135), meta=np.ndarray>
+    ZNU                    (Time, bottom_top) float32 dask.array<chunksize=(1, 39), meta=np.ndarray>
+    ZNW                    (Time, bottom_top_stag) float32 dask.array<chunksize=(1, 40), meta=np.ndarray>
+    ZS                     (Time, soil_layers_stag) float32 dask.array<chunksize=(1, 4), meta=np.ndarray>
+    ZSNSO                  (Time, snso_layers_stag, south_north, west_east) float32 dask.array<chunksize=(1, 7, 340, 270), meta=np.ndarray>
+    ZWT                    (Time, south_north, west_east) float32 dask.array<chunksize=(1, 340, 270), meta=np.ndarray>
+    Z_LAKE3D               (Time, soil_levels_or_lake_levels_stag, south_north, west_east) float32 dask.array<chunksize=(1, 10, 340, 270), meta=np.ndarray>
 Attributes: (12/149)
     ADAPT_DT_MAX:                    72.0
     ADAPT_DT_MIN:                    36.0
