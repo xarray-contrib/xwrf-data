@@ -18,7 +18,7 @@ These files are used as sample data in xwrf testing suites, tutorials, and docum
 - [`mercator_sample.nc`](./data/mercator_sample.nc): Retrieved from [NCAR/wrf-pyton](https://github.com/NCAR/wrf-python/blob/develop/test/ci_tests/ci_test_file.nc?rgh-link-date=2022-02-07T21%3A50%3A37Z)
 - [`tiny.nc`](./data/tiny.nc): A tiny file for testing purposes
 - [`met_em.d01.2005-08-28_12:00:00.nc`](./data/met_em.d01.2005-08-28_12:00:00.nc): Metgrid ouput from [openwfm](https://wiki.openwfm.org/wiki/How_to_run_WRF-Fire_with_real_data)
-- [`wrfout_d01_2099-10-01_00:00:00.nc`](./data/wrfout_d01_2099-10-01_00:00:00.nc): Excerpt of CMIP6 GCMs downscaled using WRF, accessed on 2022-09-16 from https://registry.opendata.aws/wrf-cmip6.
+- [`wrfout_d01_2099-10-01_00:00:00.nc`](./data/wrfout_d01_2099-10-01_00:00:00.nc): CMIP6 GCMs downscaled using WRF, accessed on 2022-09-16 from https://registry.opendata.aws/wrf-cmip6.
 
 ## Sample Intake Catalog
 
