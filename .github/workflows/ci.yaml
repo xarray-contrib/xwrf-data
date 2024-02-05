@@ -27,7 +27,7 @@ jobs:
         run: |
           python update_checksums.py
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         name: Upload Checksums
         with:
           name: sha256_checksums.json
